@@ -9,7 +9,9 @@ public class CalculateAverage
         foreach (int num in numbers)
         {
             sum += num;
+            
         }
+        22
         return sum / numbers.Length;
     }
 }
