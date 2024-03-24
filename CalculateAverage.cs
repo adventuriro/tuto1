@@ -5,6 +5,7 @@ public class CalculateAverage
         if (numbers == null || numbers.Length == 0)
             throw new ArgumentException("Array is null or empty");
 
+        
         double sum = 0;
         foreach (int num in numbers)
         {
