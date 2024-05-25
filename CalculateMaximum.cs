@@ -1,11 +1,21 @@
-# Example code to calculate the average of an array of integers
-public static double calculateAverage(int[] numbers) {
-    if (numbers == null || numbers.length == 0) {
-        return 0;
+using System;
+
+public class MathUtils
+{
+    public static int FindMaxValue(int[] numbers)
+    {
+        if (numbers == null || numbers.Length == 0)
+            throw new ArgumentException("Array must not be null or empty", nameof(numbers));
+
+        int max = numbers[0];
+        foreach (int num in numbers)
+        {
+            if (num > max)
+            {
+                max = num;
+            }
+        }
+
+        return max;
     }
-    int sum = 0;
-    for (int number : numbers) {
-        sum += number;
-    }
-    return (double) sum / numbers.length;
 }
